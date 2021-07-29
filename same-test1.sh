@@ -18,16 +18,6 @@ echo "not same" > /tmp/$$-ans # 出⼒して欲しい内容（⼿⼊⼒）
 diff /tmp/$$-ans /tmp/$$-result || exit 1 # 出⼒を⽐較し、失敗したらエラー終了
 
 
-# テスト2異常動作の確認
-# 変数が⼀つ
-echo "ERROR: PLZ INPUT 2 ARGMENTS" > /tmp/$$-ans # 出⼒して欲しい内容（⼿⼊⼒）
-./same.sh a 2> /tmp/$$-result && exit 1 # 実際のエラー出⼒（成功したら失敗）
-diff /tmp/$$-ans /tmp/$$-result || exit 1 # メッセージが違っても失敗
-
-
-
-
-
 #テスト3:事故処理のチェック
 
 #事後処理
